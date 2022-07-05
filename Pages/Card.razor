@@ -1,0 +1,91 @@
+@page "/"
+@inject HttpClient Http
+
+@if (challenge == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <!--Background-->
+    <div>
+    <img src="images/CardBackground.png" style="position: absolute; width: 320px; top: 0px;"/>
+    </div>
+
+    <!--Headline-->
+    <div style="position: absolute; left: 0px; width: 320px; top: 32px; text-align: center; font-size: 56px; font-family: Lucida Console, Calibri; color: white;">
+        <h1>@challenge.Name</h1>
+    </div>
+
+    <!--Ins-->
+    <div style="position: absolute; left: 0px; width: 320px; top: 88px; text-align: center; font-size: 24px; 
+        color: gray; display: flex; justify-content: center;">
+
+    <table style="align-self: center;">
+
+        @foreach (int c in challenge.Ins)
+        {
+            <th>
+                <div style="height: 28px; font-family: Calibri, monospace;">@(c+1)</div>
+                <div><img src="images/ball_1.jpg" style="height: 30px;"/></div>
+            </th>
+        }
+
+    </table>
+    </div>
+
+    <!--Tower image-->
+    <div>
+    <img src="images/tower.jpg" style="position: absolute; width: 200px; left: 60px; top: 176px;"/>
+    </div>
+
+    <!--Outs-->
+    <div style="position: absolute; left: 0px; width: 320px; top: 480px; text-align: center; font-size: 24px; font-family: Calibri, monospace; 
+        color: gray; display: flex; justify-content: center;">
+
+    <table style="align-self: center;">
+
+        @foreach (var o in challenge.Outs)
+        {
+            <th>
+                <div style="height: 28px;">@(o.Number+1)</div>
+                <div><img src=@("images/ball_" + o.Count + ".jpg") style="height: 30px;"/></div>
+            </th>
+        }
+
+    </table>
+    </div>
+
+    <!--Arrow Left-->
+    <div>
+    <img src="images/arrowLeft.png" @onclick="Prev" style="position: absolute; width: 25px; left: 30px; top: 605px;"/>
+    </div>
+
+    <!--Arrow Right-->
+    <div>
+    <img src="images/arrowRight.png" @onclick="Next" style="position: absolute; width: 25px; left: 265px; top: 605px;"/>
+    </div>
+}
+
+@code 
+{
+    Challenge challenge = null;
+    List<Challenge> challenges;
+
+    void Next()
+    {
+        challenge = challenges[Math.Min(challenges.Count-1, challenges.IndexOf(challenge) + 1)];
+    }
+
+    void Prev()
+    {
+        challenge = challenges[Math.Max(0, challenges.IndexOf(challenge) - 1)];
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        challenges = await Http.GetFromJsonAsync<List<Challenge>>("data/Challenges.json");
+        challenge = challenges[0];
+    }
+}
+
