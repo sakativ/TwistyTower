@@ -1,0 +1,220 @@
+[
+  {
+    "Name": "Easy #1",
+    "Ins": [
+      0,
+      6,
+      8
+    ],
+    "Outs": [
+      {
+        "Number": 0,
+        "Count": 1
+      },
+      {
+        "Number": 6,
+        "Count": 1
+      },
+      {
+        "Number": 8,
+        "Count": 1
+      }
+    ],
+    "Difficulty": 0.0352080464
+  },
+  {
+    "Name": "Easy #2",
+    "Ins": [
+      1,
+      6,
+      7
+    ],
+    "Outs": [
+      {
+        "Number": 0,
+        "Count": 1
+      },
+      {
+        "Number": 8,
+        "Count": 2
+      }
+    ],
+    "Difficulty": 0.0109739369
+  },
+  {
+    "Name": "Easy #3",
+    "Ins": [
+      2,
+      3,
+      6
+    ],
+    "Outs": [
+      {
+        "Number": 2,
+        "Count": 1
+      },
+      {
+        "Number": 4,
+        "Count": 1
+      },
+      {
+        "Number": 8,
+        "Count": 1
+      }
+    ],
+    "Difficulty": 0.008992531
+  },
+  {
+    "Name": "Easy #4",
+    "Ins": [
+      0,
+      1,
+      4
+    ],
+    "Outs": [
+      {
+        "Number": 0,
+        "Count": 2
+      },
+      {
+        "Number": 5,
+        "Count": 1
+      }
+    ],
+    "Difficulty": 0.0143270846
+  },
+  {
+    "Name": "Easy #5",
+    "Ins": [
+      2,
+      4,
+      5
+    ],
+    "Outs": [
+      {
+        "Number": 4,
+        "Count": 1
+      },
+      {
+        "Number": 5,
+        "Count": 2
+      }
+    ],
+    "Difficulty": 0.0117360158
+  },
+  {
+    "Name": "Easy #6",
+    "Ins": [
+      0,
+      3,
+      4
+    ],
+    "Outs": [
+      {
+        "Number": 0,
+        "Count": 1
+      },
+      {
+        "Number": 2,
+        "Count": 1
+      },
+      {
+        "Number": 5,
+        "Count": 1
+      }
+    ],
+    "Difficulty": 0.0210333783
+  },
+  {
+    "Name": "Easy #7",
+    "Ins": [
+      0,
+      5,
+      8
+    ],
+    "Outs": [
+      {
+        "Number": 0,
+        "Count": 1
+      },
+      {
+        "Number": 5,
+        "Count": 1
+      },
+      {
+        "Number": 6,
+        "Count": 1
+      }
+    ],
+    "Difficulty": 0.0138698369
+  },
+  {
+    "Name": "Easy #8",
+    "Ins": [
+      1,
+      2,
+      7
+    ],
+    "Outs": [
+      {
+        "Number": 0,
+        "Count": 1
+      },
+      {
+        "Number": 4,
+        "Count": 1
+      },
+      {
+        "Number": 8,
+        "Count": 1
+      }
+    ],
+    "Difficulty": 0.0141746681
+  },
+  {
+    "Name": "Easy #9",
+    "Ins": [
+      2,
+      5,
+      8
+    ],
+    "Outs": [
+      {
+        "Number": 4,
+        "Count": 1
+      },
+      {
+        "Number": 5,
+        "Count": 1
+      },
+      {
+        "Number": 6,
+        "Count": 1
+      }
+    ],
+    "Difficulty": 0.00975461
+  },
+  {
+    "Name": "Easy #10",
+    "Ins": [
+      5,
+      6,
+      8
+    ],
+    "Outs": [
+      {
+        "Number": 5,
+        "Count": 1
+      },
+      {
+        "Number": 6,
+        "Count": 1
+      },
+      {
+        "Number": 8,
+        "Count": 1
+      }
+    ],
+    "Difficulty": 0.03871361
+  }
+]
